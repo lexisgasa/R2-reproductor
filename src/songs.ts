@@ -55,11 +55,11 @@ export const getNextSongPosition = (
   currentSongPosition: number
 ) => {
   let nextSongPosition: number;
-  // En currentSongPosition tienes el índice de la canción que se está reproduciendo
-  // En songs tienes el array de canciones
-  // Asígnale a la variable nextSongPosition el índice de la siguiente canción que se tiene que reproducir
-  // Si la canción actual es la última, la siguiente será la primera
-  nextSongPosition = 0; // Sustituye este 0 por una expresión
+  nextSongPosition = currentSongPosition + 1;
+
+  if (currentSongPosition === songs.length - 1) {
+    nextSongPosition = 0;
+  }
 
   return nextSongPosition;
 };
