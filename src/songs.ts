@@ -26,7 +26,17 @@ export const getErrorMessage = (errorCode: string): string => {
   // - "exists": "La canción ya existe"
   // - "limit": "La playlist está llena"
 
-  errorMessage = ""; // Cambia esta línea por tu código
+  switch (errorCode) {
+    case "exists":
+      errorMessage = "La canción ya existe";
+      break;
+    case "limit":
+      errorMessage = "La playlist está llena";
+      break;
+    default:
+      errorMessage = "Ha habido un error en el proceso";
+      break;
+  }
 
   return errorMessage;
 };
