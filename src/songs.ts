@@ -11,11 +11,7 @@ export const addSong = (song: Song, songs: Song[]): void => {
 };
 
 export const isPlaylistFull = (songs: Song[]): boolean => {
-  let isFull: boolean;
-  // Asígnale a la variable isFull un true o un false dependiendo de si
-  // el array de títulos recibido tiene 4 o más elementos
-
-  isFull = false; // Cambia esta línea por tu código
+  let isFull: boolean = songs.length >= 4 ? true : false;
 
   return isFull;
 };
