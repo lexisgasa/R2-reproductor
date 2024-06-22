@@ -19,13 +19,6 @@ export const isPlaylistFull = (songs: Song[]): boolean => {
 export const getErrorMessage = (errorCode: string): string => {
   let errorMessage: string;
 
-  // A la variable anterior le tendrás que asignar un mensaje de error
-  // dependiendo del código de error recibido
-  // Si el código de error no es válido, asígnale un mensaje genérico
-  // Éstos son los códigos de error y sus mensajes correspondientes:
-  // - "exists": "La canción ya existe"
-  // - "limit": "La playlist está llena"
-
   switch (errorCode) {
     case "exists":
       errorMessage = "La canción ya existe";
@@ -43,9 +36,8 @@ export const getErrorMessage = (errorCode: string): string => {
 
 export const getSongsCount = (songs: Song[]): number => {
   let songsCount: number;
-  // Asígnale a la variable songsCount el número de canciones recibidas
 
-  songsCount = 0; // Cambia esta línea por tu código
+  songsCount = songs.length;
 
   return songsCount;
 };
